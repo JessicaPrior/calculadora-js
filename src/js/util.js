@@ -1,5 +1,5 @@
-var num1 = '';
-var num2 = '';
+var n1 = '';
+var n2 = '';
 var res = '';
 var operacao = '';
 var txtInput = document.getElementById('resultado');
@@ -12,9 +12,9 @@ function definirOperacao(valor) {
 
 function adicionarNumero(numero) {        
     if (operacao === '') {
-        num1 = obterNumero(numero, num1);
+        n1 = obterNumero(numero, n1);
     } else {
-        num2 = obterNumero(numero, num2);
+        n2 = obterNumero(numero, n2);
     }
 }
 
@@ -30,36 +30,36 @@ function obterNumero(novoNumero, numeroAtual) {
 }
 
 function limpar() {
-    num1 = '';
-    num2 = '';
+    n1 = '';
+    n2 = '';
     operacao = '';
     txtInput.value = '0';
 }
 
 function calcular() {
-    if (num1 === '' || num2 === '' || operacao === '') {
+    if (n1 === '' || n2 === '' || operacao === '') {
         return;
     }
     var res = '';
-    num1 = parseFloat(num1);
-    num2 = parseFloat(num2);
+    n1 = parseFloat(n1);
+    n2 = parseFloat(n2);
     switch (operacao) {
         case '+':
-            res = Calculadora.somar(num1, num2);
+            res = Calculadora.somar(n1, n2);
             break;
         case '-':
-            res = Calculadora.subtrair(num1, num2);
+            res = Calculadora.subtrair(n1, n2);
             break;
         case '/':
-            res = Calculadora.dividir(num1, num2);
+            res = Calculadora.dividir(n1, n2);
             break;
         case '*':
-            res = Calculadora.multiplicar(num1, num2);
+            res = Calculadora.multiplicar(n1, n2);
             break;
     }
     res = res.toString();
     txtInput.value = res.length <= 10 ? res : res.substr(0, 10);
-    num1 = txtInput.value;
-    num2 = '';
+    n1 = txtInput.value;
+    n2 = '';
     operacao = '';
 }
