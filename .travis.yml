@@ -1,0 +1,8 @@
+language: 
+  node_js
+node-js:
+  - 12.18.3
+services:
+  - xvfb
+before_install:
+  - "export DISPLAY=:99.0"

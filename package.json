@@ -1,0 +1,31 @@
+{
+  "name": "calculadora-js",
+  "version": "1.0.0",
+  "description": "Calculadora em JS com testes em Jasmine",
+  "main": "index.js",
+  "scripts": {
+    "test-jasmine": "jasmine",
+    "test-dev": "karma start",
+    "test": "karma start --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessicaPrior/calculadora-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JessicaPrior/calculadora-js/issues"
+  },
+  "homepage": "https://github.com/JessicaPrior/calculadora-js#readme",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "jasmine": "^3.6.4",
+    "karma": "^6.1.2",
+    "karma-browserify": "^8.0.0",
+    "karma-firefox-launcher": "^2.1.0",
+    "karma-jasmine": "^4.0.1",
+    "watchify": "^4.0.0"
+  }
+}
