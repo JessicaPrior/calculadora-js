@@ -45,7 +45,7 @@ function calcular() {
     num2 = parseFloat(num2);
     switch (operacao) {
         case '+':
-            res = Calculadora.adicionar(num1, num2);
+            res = Calculadora.somar(num1, num2);
             break;
         case '-':
             res = Calculadora.subtrair(num1, num2);
